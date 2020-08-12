@@ -2,7 +2,13 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
-
+gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 5.6.1'
+gem 'simple_form'
+# used to easily generate fake data: names, addresses, phone numbers, etc.
+gem 'faker', '~> 2.13'
+# Great Ruby debugging companion: pretty print Ruby objects to visualize their structure.
+gem 'amazing_print', '~> 1.2', '>= 1.2.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use sqlite3 as the database for Active Record
