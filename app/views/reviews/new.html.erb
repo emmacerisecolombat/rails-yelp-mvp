@@ -1,2 +1,4 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+<div class="container text-center" style="max-width:500px">
+  <h1>Leave A Review for <%= @restaurant.name %>!</h1>
+  <%= render 'form', review: @review %>
+</div>

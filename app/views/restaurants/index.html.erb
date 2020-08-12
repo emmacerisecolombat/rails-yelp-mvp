@@ -1,24 +1,24 @@
 <h1>Les Restaurants</h1>
 
-
+<div>
+  <%= link_to 'Create New Restaurant', new_restaurant_path %>
+</div>
 <div class="container">
   <div class="row">
-    <div class="col-6">
-      <div class="card">
-        <%= @restaurants.each do |restaurant| %>
-        <div class="border border-warning rounded my-2">
-          <div class="card-header">
-            <h2><%= restaurant.name %></h2>
-          </div>
-          <div class="card-body">
-            <p><strong>Address:</strong><%= restaurant.address %></p>
-            <p><strong>Call Us:</strong><%= restaurant.phone_number %></p>
-            <p><em>Category:</em><%= restaurant.category %></p>
+      <% @restaurants.each do |restaurant| %>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card border border-primary rounded m-2 ">
+            <div class="card-header">
+              <h2><%= restaurant.name %></h2>
+            </div>
+            <div class="card-body">
+              <p><strong>Address:</strong><%= restaurant.address %></p>
+              <p><strong>Call Us:</strong><%= restaurant.phone_number %></p>
+              <p><em>Category:</em><%= restaurant.category %></p>
+              <%= link_to 'Check It Out', restaurant_path(restaurant) %>
+            </div>
           </div>
         </div>
-        <% end %>
-      </div>
-    </div>
+      <% end %>
   </div>
 </div>
-
