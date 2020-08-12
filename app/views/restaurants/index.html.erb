@@ -1,2 +1,24 @@
-<h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<h1>Les Restaurants</h1>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <%= @restaurants.each do |restaurant| %>
+        <div class="border border-warning rounded my-2">
+          <div class="card-header">
+            <h2><%= restaurant.name %></h2>
+          </div>
+          <div class="card-body">
+            <p><strong>Address:</strong><%= restaurant.address %></p>
+            <p><strong>Call Us:</strong><%= restaurant.phone_number %></p>
+            <p><em>Category:</em><%= restaurant.category %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
